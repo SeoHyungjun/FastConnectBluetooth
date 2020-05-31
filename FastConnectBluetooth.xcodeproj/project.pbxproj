@@ -10,7 +10,7 @@
 		677C56312483CAEB00D4836C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C56302483CAEB00D4836C /* AppDelegate.swift */; };
 		677C56332483CAEB00D4836C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C56322483CAEB00D4836C /* SceneDelegate.swift */; };
 		677C56362483CAEB00D4836C /* FastConnectBluetooth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 677C56342483CAEB00D4836C /* FastConnectBluetooth.xcdatamodeld */; };
-		677C56382483CAEB00D4836C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C56372483CAEB00D4836C /* ContentView.swift */; };
+		677C56382483CAEB00D4836C /* BluetoothListScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C56372483CAEB00D4836C /* BluetoothListScene.swift */; };
 		677C563A2483CAEC00D4836C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677C56392483CAEC00D4836C /* Assets.xcassets */; };
 		677C563D2483CAEC00D4836C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 677C563C2483CAEC00D4836C /* Preview Assets.xcassets */; };
 		677C56402483CAEC00D4836C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 677C563E2483CAEC00D4836C /* LaunchScreen.storyboard */; };
@@ -40,7 +40,7 @@
 		677C56302483CAEB00D4836C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		677C56322483CAEB00D4836C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		677C56352483CAEB00D4836C /* FastConnectBluetooth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FastConnectBluetooth.xcdatamodel; sourceTree = "<group>"; };
-		677C56372483CAEB00D4836C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		677C56372483CAEB00D4836C /* BluetoothListScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothListScene.swift; sourceTree = "<group>"; };
 		677C56392483CAEC00D4836C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		677C563C2483CAEC00D4836C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		677C563F2483CAEC00D4836C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			children = (
 				677C56302483CAEB00D4836C /* AppDelegate.swift */,
 				677C56322483CAEB00D4836C /* SceneDelegate.swift */,
-				677C56372483CAEB00D4836C /* ContentView.swift */,
+				677C56372483CAEB00D4836C /* BluetoothListScene.swift */,
 				677C56392483CAEC00D4836C /* Assets.xcassets */,
 				677C563E2483CAEC00D4836C /* LaunchScreen.storyboard */,
 				677C56412483CAEC00D4836C /* Info.plist */,
@@ -272,7 +272,7 @@
 			files = (
 				677C56362483CAEB00D4836C /* FastConnectBluetooth.xcdatamodeld in Sources */,
 				677C56312483CAEB00D4836C /* AppDelegate.swift in Sources */,
-				677C56382483CAEB00D4836C /* ContentView.swift in Sources */,
+				677C56382483CAEB00D4836C /* BluetoothListScene.swift in Sources */,
 				677C56332483CAEB00D4836C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

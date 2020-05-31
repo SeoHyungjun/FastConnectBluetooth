@@ -16,6 +16,8 @@
 		677C56402483CAEC00D4836C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 677C563E2483CAEC00D4836C /* LaunchScreen.storyboard */; };
 		677C564B2483CAEC00D4836C /* FastConnectBluetoothTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C564A2483CAEC00D4836C /* FastConnectBluetoothTests.swift */; };
 		677C56562483CAEC00D4836C /* FastConnectBluetoothUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C56552483CAEC00D4836C /* FastConnectBluetoothUITests.swift */; };
+		677C56652483CD0900D4836C /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C56642483CD0900D4836C /* Bluetooth.swift */; };
+		677C56672483CFFE00D4836C /* BluetoothStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C56662483CFFE00D4836C /* BluetoothStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		677C56512483CAEC00D4836C /* FastConnectBluetoothUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastConnectBluetoothUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		677C56552483CAEC00D4836C /* FastConnectBluetoothUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastConnectBluetoothUITests.swift; sourceTree = "<group>"; };
 		677C56572483CAEC00D4836C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		677C56642483CD0900D4836C /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
+		677C56662483CFFE00D4836C /* BluetoothStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		677C562F2483CAEB00D4836C /* FastConnectBluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				677C56632483CBA400D4836C /* Model */,
 				677C56302483CAEB00D4836C /* AppDelegate.swift */,
 				677C56322483CAEB00D4836C /* SceneDelegate.swift */,
 				677C56372483CAEB00D4836C /* BluetoothListScene.swift */,
@@ -137,6 +142,15 @@
 				677C56572483CAEC00D4836C /* Info.plist */,
 			);
 			path = FastConnectBluetoothUITests;
+			sourceTree = "<group>";
+		};
+		677C56632483CBA400D4836C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				677C56642483CD0900D4836C /* Bluetooth.swift */,
+				677C56662483CFFE00D4836C /* BluetoothStore.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				677C56672483CFFE00D4836C /* BluetoothStore.swift in Sources */,
 				677C56362483CAEB00D4836C /* FastConnectBluetooth.xcdatamodeld in Sources */,
+				677C56652483CD0900D4836C /* Bluetooth.swift in Sources */,
 				677C56312483CAEB00D4836C /* AppDelegate.swift in Sources */,
 				677C56382483CAEB00D4836C /* BluetoothListScene.swift in Sources */,
 				677C56332483CAEB00D4836C /* SceneDelegate.swift in Sources */,

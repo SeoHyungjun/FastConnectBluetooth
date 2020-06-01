@@ -29,6 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let contentView = BluetoothListScene()
             .environment(\.managedObjectContext, context)
             .environmentObject(store)
+            .environmentObject(DateFormatter.bluetoothDateFormatter)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

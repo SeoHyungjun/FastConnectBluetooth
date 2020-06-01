@@ -18,6 +18,7 @@
 		677C56562483CAEC00D4836C /* FastConnectBluetoothUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C56552483CAEC00D4836C /* FastConnectBluetoothUITests.swift */; };
 		677C56652483CD0900D4836C /* Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C56642483CD0900D4836C /* Bluetooth.swift */; };
 		677C56672483CFFE00D4836C /* BluetoothStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677C56662483CFFE00D4836C /* BluetoothStore.swift */; };
+		6792F58A248500A5000861E9 /* DateFormatter+Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792F589248500A5000861E9 /* DateFormatter+Bluetooth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		677C56572483CAEC00D4836C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		677C56642483CD0900D4836C /* Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bluetooth.swift; sourceTree = "<group>"; };
 		677C56662483CFFE00D4836C /* BluetoothStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothStore.swift; sourceTree = "<group>"; };
+		6792F589248500A5000861E9 /* DateFormatter+Bluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Bluetooth.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		677C562F2483CAEB00D4836C /* FastConnectBluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				6792F58824850077000861E9 /* Extension */,
 				677C56632483CBA400D4836C /* Model */,
 				677C56302483CAEB00D4836C /* AppDelegate.swift */,
 				677C56322483CAEB00D4836C /* SceneDelegate.swift */,
@@ -151,6 +154,14 @@
 				677C56662483CFFE00D4836C /* BluetoothStore.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6792F58824850077000861E9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6792F589248500A5000861E9 /* DateFormatter+Bluetooth.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +298,7 @@
 				677C56672483CFFE00D4836C /* BluetoothStore.swift in Sources */,
 				677C56362483CAEB00D4836C /* FastConnectBluetooth.xcdatamodeld in Sources */,
 				677C56652483CD0900D4836C /* Bluetooth.swift in Sources */,
+				6792F58A248500A5000861E9 /* DateFormatter+Bluetooth.swift in Sources */,
 				677C56312483CAEB00D4836C /* AppDelegate.swift in Sources */,
 				677C56382483CAEB00D4836C /* BluetoothListScene.swift in Sources */,
 				677C56332483CAEB00D4836C /* SceneDelegate.swift in Sources */,

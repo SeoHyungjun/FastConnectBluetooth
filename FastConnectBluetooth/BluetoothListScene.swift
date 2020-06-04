@@ -13,12 +13,13 @@ struct BluetoothListScene: View {
     //뷰가 생성되는 시점에 공유 데이터 목록을 확인, 스토어 속성과 동일한 형식을 가진 객체가 등록되어있다면
     //store에 자동으로 저장
     @EnvironmentObject var store: BluetoothStore
+    @EnvironmentObject var blelist: BLEConnection
     //formatter 속성 추가
     @EnvironmentObject var formatter: DateFormatter
     
     var body: some View {
         NavigationView {
-            List(store.list) {
+            List(blelist.list2) {
                 bluetooth in
                 //배열에 저장되어있는 bluetooth가 파라미터로 전달
                 //텍스트로 bluetooth 내용 전달
@@ -50,5 +51,7 @@ struct BluetoothListScene_Previews: PreviewProvider {
         //프리뷰에서 사용할 bluetooth store를 공유 데이터로 등록
             .environmentObject(BluetoothStore())
             .environmentObject(DateFormatter.bluetoothDateFormatter)
+        
+            .environmentObject(BLEConnection())
     }
 }

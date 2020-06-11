@@ -36,3 +36,9 @@ extension Bluetooth: Equatable {
         return lhs.id == rhs.id
     }
 }
+
+struct Bluetooth_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}

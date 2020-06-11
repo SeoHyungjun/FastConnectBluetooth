@@ -11,10 +11,11 @@ import UIKit
 import CoreBluetooth
 
 class BLEConnection: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate, ObservableObject {
-    //@Published var list2: [Bluetooth]
-    @Published var list2 = [
-        Bluetooth(content: "...")
-    ]
+    @Published var list2: [Bluetooth] = []
+    //@Published var list2 = [
+    //    Bluetooth(content: "...")
+    //]
+    var scannedBLEDevices: [String] = []
     
     // Properties
     private var centralManager: CBCentralManager! = nil
@@ -22,11 +23,11 @@ class BLEConnection: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate, O
 
     public static let bleServiceUUID = CBUUID.init(string: "FF00")
     //public static let bleCharacteristicUUID = CBUUID.init(string: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXXX")
-    public static let bleCharacteristicUUID = CBUUID.init(string: "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaaa")
+    public static let bleCharacteristicUUID = CBUUID.init(string: "0000110b-0000-1000-8000-00805F9B34FB")
 
     // Array to contain names of BLE devices to connect to.
     // Accessable by ContentView for Rendering the SwiftUI Body on change in this array.
-    var scannedBLEDevices: [String] = []
+    
     
     func startCentralManager() {
         self.centralManager = CBCentralManager(delegate: self, queue: nil)
@@ -59,6 +60,7 @@ class BLEConnection: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate, O
             //self.centralManager.scanForPeripherals(withServices: [BLEConnection.bleServiceUUID],options: [CBCentralManagerScanOptionAllowDuplicatesKey : true])
             //self.centralManager.scanForPeripherals(withServices: nil, options: nil)
             self.centralManager.scanForPeripherals(withServices: nil, options: nil)
+            //self.centralManager.scanForPeripherals(withServices: [BLEConnection.bleCharacteristicUUID],options: [CBCentralManagerScanOptionAllowDuplicatesKey : true])
             break
         @unknown default:
             print("fatal error")
@@ -83,10 +85,14 @@ class BLEConnection: NSObject, CBPeripheralDelegate, CBCentralManagerDelegate, O
         if peripheral.name != nil {
             print(peripheral.name as Any)
             
-            if !(list2.contains(Bluetooth(content: peripheral.name!))) {
+            if !(scannedBLEDevices.contains(peripheral.name!)) {
+                scannedBLEDevices.insert(peripheral.name!, at: 0)
+                
+            /*if !(list2.contains(Bluetooth(content: peripheral.name!))) {
                 if list2.contains(Bluetooth(content: "...")) {
-                    list2.remove(at: 0)
+                    list2.removeAll()
                 }
+                 */
                 list2.insert(Bluetooth(content: peripheral.name!), at: 0)
             }
         }

@@ -26,6 +26,7 @@ struct BluetoothListScene: View {
                 
                 //alignment를 leading으로 설정하면 왼쪽 정령
                 VStack(alignment: .leading) {
+                    //Text(bluetooth.content)
                     Text(bluetooth.content)
                     //텍스트에 모디파이어를 설정하고 기본 속성 변경
                         //기본 폰트중 body로 설정

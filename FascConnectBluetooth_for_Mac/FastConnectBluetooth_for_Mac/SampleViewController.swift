@@ -13,7 +13,7 @@ class SampleViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        resultTextView.layer?.cornerRadius = 30
     }
     
     

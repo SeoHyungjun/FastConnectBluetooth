@@ -18,6 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.image = NSImage(named: NSImage.Name("StatusBarButtonImage"))
             button.action = #selector(togglePopover(_:))
         }
+        popover.behavior = NSPopover.Behavior.transient // 팝오버가 아닌 다른곳 클릭시 팝오버 끄기
         popover.contentViewController = SampleViewController.freshController()
     }
 

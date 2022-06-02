@@ -12,6 +12,15 @@ import SwiftUI
 // Link in Description
 
 struct Home: View {
+    var body: some View {
+        VStack() {
+            Text("test")
+        }
+    }
+}
+
+/*
+struct Home: View {
     @State var currentTab: String = "Crypto"
     @Namespace var animation
     var body: some View {
@@ -88,3 +97,4 @@ struct Home_Previews: PreviewProvider {
         Home()
     }
 }
+*/

@@ -27,6 +27,8 @@ class AppDelegate: NSObject, ObservableObject, NSApplicationDelegate {
     // Properties
     @Published var statusItem: NSStatusItem?
     @Published var popover = NSPopover()
+    @Published var menu = NSMenu()
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
         setUpMacMenu()
     }
@@ -47,8 +49,12 @@ class AppDelegate: NSObject, ObservableObject, NSApplicationDelegate {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let menuButton = statusItem?.button {
             menuButton.image = .init(systemSymbolName: "dollarsign.circle.fill", accessibilityDescription: nil)
-            menuButton.action = #selector(menuButtonAction(sender:))
+            //menuButton.action = #selector(menuButtonAction(sender:))
+            menu.addItem(NSMenuItem(title: "장치 선택", action: #selector(menuButtonAction(sender:)), keyEquivalent: ""))
+            menu.addItem(NSMenuItem(title: "종료", action: nil, keyEquivalent: ""))
+            statusItem?.menu = menu
         }
+        
     }
     
     @objc func menuButtonAction(sender: AnyObject) {

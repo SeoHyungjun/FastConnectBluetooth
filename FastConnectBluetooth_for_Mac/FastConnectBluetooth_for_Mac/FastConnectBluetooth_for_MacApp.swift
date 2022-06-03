@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreBluetooth
 
 @main
 struct FastConnectBluetooth_for_MacApp: App {
@@ -28,6 +29,7 @@ class AppDelegate: NSObject, ObservableObject, NSApplicationDelegate {
     @Published var statusItem: NSStatusItem?
     @Published var popover = NSPopover()
     @Published var menu = NSMenu()
+    var connection: Bool = false
     
     func applicationDidFinishLaunching(_ notification: Notification) {
         setUpMacMenu()
@@ -47,23 +49,42 @@ class AppDelegate: NSObject, ObservableObject, NSApplicationDelegate {
         
         // Setting Menu Bar Icon and Action
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
-        if let menuButton = statusItem?.button {
-            menuButton.image = .init(systemSymbolName: "dollarsign.circle.fill", accessibilityDescription: nil)
-            //menuButton.action = #selector(menuButtonAction(sender:))
-            menu.addItem(NSMenuItem(title: "장치 선택", action: #selector(menuButtonAction(sender:)), keyEquivalent: ""))
-            menu.addItem(NSMenuItem(title: "종료", action: nil, keyEquivalent: ""))
-            statusItem?.menu = menu
+        if let button = statusItem?.button {
+            button.image = NSImage(named: NSImage.Name("StatusBarButtonImage"))
+            button.action = #selector(menuButtonAction(sender:))
+            button.sendAction(on: [.leftMouseUp, .rightMouseUp])
         }
+        menu.addItem(NSMenuItem(title: "장치 선택", action: #selector(menuButtonAction(sender:)), keyEquivalent: ""))
+        menu.addItem(NSMenuItem(title: "종료", action: nil, keyEquivalent: ""))
         
     }
     
     @objc func menuButtonAction(sender: AnyObject) {
-        // Showing/Closing Popover
-        if popover.isShown {
-            popover.close()
-        } else {
-            if let menuButton = statusItem?.button{
-                popover.show(relativeTo: menuButton.bounds, of: menuButton, preferredEdge: .minY)
+        let event = NSApp.currentEvent!
+        if event.type == NSEvent.EventType.rightMouseUp {
+            statusItem?.menu = menu
+            statusItem?.button?.performClick(nil)
+            statusItem?.menu = nil
+            
+            /*
+            // Showing/Closing Popover
+            if popover.isShown {
+                popover.close()
+            } else {
+                if let menuButton = statusItem?.button{
+                    popover.show(relativeTo: menuButton.bounds, of: menuButton, preferredEdge: .minY)
+                }
+            }
+             */
+        }
+        else {
+            if connection {
+                connection = false
+                print("unconnected")
+            }
+            else {
+                print("connected")
+                connection = true
             }
         }
     }
